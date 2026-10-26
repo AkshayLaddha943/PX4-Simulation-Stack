@@ -13,7 +13,7 @@ Run the command:
 cd PX4-Autopilot && PX4_GZ_WORLD=baylands make px4_sitl gz_x500_mono_cam_down
 ```
 
-<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="400" width="400" alt="environment">
+<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="800" width="800" alt="environment">
 
 ### QGC
 QGroundControl is the GCS allowing us to set waypoints, mission plan and monitor drone health during flight. 
