@@ -9,6 +9,10 @@ For this use case, we will use the baylands world from PX4 development environme
 
 Run the command:
 
+```
+cd PX4-Autopilot && PX4_GZ_WORLD=baylands make px4_sitl gz_x500_mono_cam_down
+
+```
 
 
 ### QGC
@@ -16,13 +20,27 @@ QGroundControl is the GCS allowing us to set waypoints, mission plan and monitor
 
 Run the command:
 
+```
+./QGroundControl-x86_64.AppImage
+
+```
+
 ### Sensor Data
 There are two ways to receive sensor data
 
 #### Gazebo -> ROS2
 
+```
+ros2 run ros_gz_bridge parameter_bridge   /world/aruco/model/x500_mono_cam_down_0/link/camera_link/sensor/camera/image@sensor_msgs/msg/Image@gz.msgs.Image   /world/aruco/model/x500_mono_cam_down_0/link/camera_link/sensor/camera/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo /world/aruco/model/x500_mono_cam_down_0/link/base_link/sensor/navsat_sensor/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat /world/aruco/model/x500_mono_cam_down_0/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
+
+```
+
 #### Using uXRCE-DDS (PX4-ROS 2/DDS Bridge)
 
+```
+MicroXRCEAgent udp4 -p 8888
+ros2 topic list
+```
 
 ### Visualize the sensor data
 In order to visualize the sensor data, we will use the Rviz2 visualization tool
