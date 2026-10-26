@@ -34,7 +34,6 @@ There are two ways to receive sensor data
 
 ```
 ros2 run ros_gz_bridge parameter_bridge   /world/aruco/model/x500_mono_cam_down_0/link/camera_link/sensor/camera/image@sensor_msgs/msg/Image@gz.msgs.Image   /world/aruco/model/x500_mono_cam_down_0/link/camera_link/sensor/camera/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo /world/aruco/model/x500_mono_cam_down_0/link/base_link/sensor/navsat_sensor/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat /world/aruco/model/x500_mono_cam_down_0/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
-
 ```
 
 #### Using uXRCE-DDS (PX4-ROS 2/DDS Bridge)
