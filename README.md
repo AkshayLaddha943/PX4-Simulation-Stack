@@ -13,7 +13,7 @@ Run the command:
 cd PX4-Autopilot && PX4_GZ_WORLD=baylands make px4_sitl gz_x500_mono_cam_down
 ```
 
-<p align="left"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="400" width="500" alt="environment"> <p align="right"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/drone.png" height="400" width="500" alt="drone">
+<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="500" width="500" alt="environment"> <p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/drone.png" height="500" width="500" alt="drone">
 
 
 
