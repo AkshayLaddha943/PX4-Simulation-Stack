@@ -1,11 +1,17 @@
 # PX4-Simulation-Stack
-This repository provides the steps to configure a drone model with downward facing camera and an IMU to evaluate a visual-inertial system for navigation
+This repository provides the steps to configure a drone model with downward facing camera and an IMU to evaluate a visual-inertial system for navigation. For the environment, The PX4-Baylands Environment as well as a Satellite Map overlaid on the Gazebo surface is evaluated, instructions for setting both of them are provided below
 
 ## Setup
 
-### Gazebo World & Drone Model
+### Drone Model
 
-For this use case, we will use the baylands world from PX4 development environment, due to its diverse and feature-rich environment. The drone is configured with a downward-facing camera and an IMU and is later evaluated against the ground truth position from Gazebo, essential for evaluating our navigation system's accuracy.
+The drone is configured with a downward-facing camera and an IMU and is later evaluated against the ground truth position from Gazebo, essential for evaluating our navigation system's accuracy.
+
+<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/drone.png" height="500" width="500" alt="drone">
+
+### Gazebo Baylands World
+
+For this use case, we will use the baylands world from PX4 development environment, due to its diverse and feature-rich environment. 
 
 Run the command:
 
@@ -13,9 +19,7 @@ Run the command:
 cd PX4-Autopilot && PX4_GZ_WORLD=baylands make px4_sitl gz_x500_mono_cam_down
 ```
 
-<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="500" width="500" alt="environment"> <p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/drone.png" height="500" width="500" alt="drone">
-
-
+<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/env.png" height="500" width="500" alt="environment">
 
 
 ### QGC
@@ -43,6 +47,11 @@ MicroXRCEAgent udp4 -p 8888
 ros2 topic list
 ```
 
-### Visualize the sensor data
-In order to visualize the sensor data, we will use the Rviz2 visualization tool
+### Gazebo Satellite Map World
+
+To get the Satellite Map, You can use QGIS or USGS for cropping, rasterization and georeferencing. Here, We replace the Aruco world with the Satellite Map, specify the latitude and longitude in the world file of PX4 and launch the same.
+
+```
+cd PX4-Autopilot && PX4_GZ_WORLD=aruco make px4_sitl gz_x500_mono_cam_down
+```
 
