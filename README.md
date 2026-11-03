@@ -55,5 +55,5 @@ To get the Satellite Map, You can use QGIS or USGS for cropping, rasterization a
 cd PX4-Autopilot && PX4_GZ_WORLD=aruco make px4_sitl gz_x500_mono_cam_down
 ```
 
-<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/drone.png" height="500" width="500" alt="drone">
+<p align="center"> <img src="https://github.com/AkshayLaddha943/PX4-Simulation-Stack/blob/main/imgs/satellite.png" height="650" width="600" alt="satellite">
 
